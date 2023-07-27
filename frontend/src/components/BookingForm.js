@@ -18,7 +18,7 @@ const BookingForm = () => {
   const handleChange = async() => {
   
     
-      let data= await fetch("http://localhost:3000/Reservation",{
+      let data= await fetch("https://fsadfjlasjf-ljas.onrender.com/reservation",{
         method:'post',
         body : JSON.stringify({name,mail,checkin,checkout,guest,text}),
         headers:{
