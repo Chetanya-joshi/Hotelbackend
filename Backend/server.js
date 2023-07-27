@@ -21,7 +21,7 @@ app.get('*',function(req,res){
 app.listen(process.env.PORT || 3000);
 
 // contact us  detail 
-app.post('/contactus?', async(req, res) => {
+app.post('/contactus', async(req, res) => {
   console.log('Hello World!')
 let info = new information({
     name:req.body.name,
