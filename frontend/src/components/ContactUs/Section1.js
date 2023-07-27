@@ -19,7 +19,7 @@ const ContactUS = () => {
 
   const submit1=async()=>{
     
-    let data= await fetch("https://fsadfjlasjf-ljas.onrender.com/contactus?",{
+    let data= await fetch("https://fsadfjlasjf-ljas.onrender.com/contactus",{
       method:'post',
       body : JSON.stringify({name,email,message}),
       headers:{
