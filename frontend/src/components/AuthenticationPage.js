@@ -92,6 +92,8 @@ const SignIn = ({ toggleForm }) => {
 };
 
 const SignUp = ({ toggleForm }) => {
+  const [name , setName] = useState("");
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -105,6 +107,7 @@ const SignUp = ({ toggleForm }) => {
      alignItems: "center",
      minHeight: "100vh",
    };
+  
 
     return (
       <div style={{ backgroundColor: "aliceblue" }}>
@@ -131,7 +134,17 @@ const SignUp = ({ toggleForm }) => {
             <Col xs={12} md={6} lg={6}>
               <div className="auth-form">
                 <h2>Sign Up</h2>
-                <Form onSubmit={handleSubmit}>
+                
+                  <Form.Group controlId="name" className="py-2">
+                    <Form.Label>User Name</Form.Label>
+                    <Form.Control
+                      type="name"
+                      placeholder="Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </Form.Group>
+                  <Form onSubmit={handleSubmit}>
                   <Form.Group controlId="email" className="py-2">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control
